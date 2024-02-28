@@ -32,7 +32,7 @@ const handleSearch = () => {
 
 const getWeather = async(id) => {
   //console.log(id);
-  const res = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=10bee5adad3f434f96c234659241802&q=id:${id}&days=3&aqi=no&alerts=no`);
+  const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=10bee5adad3f434f96c234659241802&q=id:${id}&days=3&aqi=no&alerts=no`);
   const data = await res.json();
   emit("place-data", data);
 };
