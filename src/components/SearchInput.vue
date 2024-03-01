@@ -17,7 +17,7 @@ const handleSearch = () => {
     //console.log(searchTerm.value); // mostrar el valor del input de busqueda
     if (searchTerm.value !== "") {
       const resp = await fetch(
-        `https://api.weatherapi.com/v1/search.json?key=10bee5adad3f434f96c234659241802&q=${searchTerm.value}`
+        `https://api.weatherapi.com/v1/search.json?key=ee53ff2c52524fd5a5712202240103&q=${searchTerm.value}`
       );
       const data = await resp.json(); // convertir la respuesta a json
       searchTerm.results = data; // guardar la respuesta en la variable results
@@ -32,7 +32,7 @@ const handleSearch = () => {
 
 const getWeather = async(id) => {
   //console.log(id);
-  const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=10bee5adad3f434f96c234659241802&q=id:${id}&days=3&aqi=no&alerts=no`);
+  const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=ee53ff2c52524fd5a5712202240103&q=id:${id}&days=3&aqi=no&alerts=no`);
   const data = await res.json();
   emit("place-data", data);
 };
